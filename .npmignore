@@ -1,0 +1,11 @@
+.babelrc
+.hgignore
+.gitignore
+package-lock.json
+
+.hg/
+.git/
+spec/
+test/
+tests/
+node_modules/
