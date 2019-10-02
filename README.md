@@ -1,6 +1,6 @@
 # Phoenix Tabs
 
-Phoenix "Web Tabs"-Komponente auf Mithril-Basis.
+Phoenix Drop Down bzw. Select Box. Umgesetzt mit Mithril.
 
 Die Komponente ist Teil des [Phoenix Reisen Design-Systems](https://design-system.phoenixreisen.net).
 
@@ -9,35 +9,39 @@ Die Komponente ist Teil des [Phoenix Reisen Design-Systems](https://design-syste
 [Mithril](https://mithril.js.org/) wird benötigt.
 
 ```bash
-npm install --save-dev @phoenixreisen/tabs
+npm install --save @phoenixreisen/select
 ```
 
 ## Anwendung
 
 ```js
 // entweder CommonJS
-const Tabs = require('@phoenixreisen/tabs');
+const Tabs = require('@phoenixreisen/select');
 
 // oder ES6+
-import Tabs from '@phoenixreisen/tabs';
+import Tabs from '@phoenixreisen/select';
 ```
 
 #### Aufruf
 
 ```js
 // Hyperscript bzw. Javascript
-m(Tabs, 
-    { tabs: ['Tab 1', 'Tab 2'] }, 
-    [ m('div.tab1'), m('div.tab2') ]
-);
+const el1 = m('div');
+const el2 = m('div');
+const el3 = m('a'); 
+
+m(SelectView, { title: 'Optionen' }, [ 
+    el1, 
+    el2, 
+    el3 
+]);
 
 // JSX
-<Tabs tabs={['Tab 1', 'Tab 2']}>
-    {[
-        <div class="tab1">Tab 1</div>,
-        <div class="tab2">Tab 2</div>,
-    ]}
-</Tabs>
+<Select title="Optionen">
+    <el1 />
+    <el2 />
+    <el3 />
+</Select>
 ```
 
 ## Test

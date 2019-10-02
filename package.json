@@ -1,9 +1,9 @@
 {
-  "name": "@phoenixreisen/tabs",
-  "version": "1.1.14",
-  "description": "Tab-Komponente, um Content durch Tabs zu strukturieren.",
-  "homepage": "https://www.phoenixreisen.com",
-  "main": "dist/tabs.view.js",
+  "name": "@phoenixreisen/select",
+  "version": "0.0.1",
+  "description": "Mithril Drop Down bzw. Select Box",
+  "homepage": "https://design-system.phoenixreisen.com",
+  "main": "dist/select.view.js",
   "scripts": {
     "compile:js": "babel src --out-dir dist",
     "compile:scss": "npx sass --no-source-map ./src:./dist",
@@ -14,16 +14,13 @@
   },
   "author": "Phoenix Reisen <it@phoenixreisen.com>",
   "contributors": [
-    "Phoenix Reisen <it@phoenixreisen.com>",
-    "Fabian Marcus <f.marcus@phoenixreisen.com>",
-    "Jan Hermanns <j.hermanns@phoenixreisen.com>",
-    "Leon Schmitz <l.schmitz@phoenixreisen.com>"
+    "Fabian Marcus <f.marcus@phoenixreisen.com>"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/phoenixreisen/tabs.git"
+    "url": "https://github.com/phoenixreisen/select.git"
   },
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "mithril": "^2.0.4"
   },
@@ -34,7 +31,7 @@
     "babel-plugin-inline-svg": "^1.0.1",
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-preset-env": "^1.7.0",
-    "del-cli": "^2.0.0",
+    "del-cli": "^3.0.0",
     "jsdom": "^15.1.1",
     "mithril-node-render": "^2.3.2",
     "mithril-query": "^3.0.1",
