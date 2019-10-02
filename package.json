@@ -2,7 +2,7 @@
   "name": "@phoenixreisen/select",
   "version": "0.0.1",
   "description": "Mithril Drop Down bzw. Select Box",
-  "homepage": "https://design-system.phoenixreisen.com",
+  "homepage": "https://design-system.phoenixreisen.net",
   "main": "dist/select.view.js",
   "scripts": {
     "compile:js": "babel src --out-dir dist",
