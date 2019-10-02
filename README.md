@@ -1,4 +1,4 @@
-# Phoenix Tabs
+# Phoenix Select Box
 
 Phoenix Drop Down bzw. Select Box. Umgesetzt mit Mithril.
 
