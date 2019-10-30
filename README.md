@@ -1,6 +1,6 @@
-# Phoenix Select Box
+# Phoenix Dropdown
 
-Phoenix Drop Down bzw. Select Box. Umgesetzt mit Mithril.
+Phoenix Dropdown, umgesetzt mit Mithril.
 
 Die Komponente ist Teil des [Phoenix Reisen Design-Systems](https://design-system.phoenixreisen.net).
 
@@ -9,17 +9,17 @@ Die Komponente ist Teil des [Phoenix Reisen Design-Systems](https://design-syste
 [Mithril](https://mithril.js.org/) wird benötigt.
 
 ```bash
-npm install --save @phoenixreisen/select
+npm install --save @phoenixreisen/dropdown
 ```
 
 ## Anwendung
 
 ```js
 // entweder CommonJS
-const Tabs = require('@phoenixreisen/select');
+const DropDown = require('@phoenixreisen/dropdown');
 
 // oder ES6+
-import Tabs from '@phoenixreisen/select';
+import Dropdown from '@phoenixreisen/dropdown';
 ```
 
 #### Aufruf
@@ -30,18 +30,18 @@ const el1 = m('div');
 const el2 = m('div');
 const el3 = m('a'); 
 
-m(SelectView, { title: 'Optionen' }, [ 
+m(Dropdown, { title: 'Optionen' }, [ 
     el1, 
     el2, 
     el3 
 ]);
 
 // JSX
-<Select title="Optionen">
+<Dropdown title="Optionen">
     <el1 />
     <el2 />
     <el3 />
-</Select>
+</Dropdown>
 ```
 
 ## Test
