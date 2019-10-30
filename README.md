@@ -16,7 +16,7 @@ npm install --save @phoenixreisen/dropdown
 
 ```js
 // entweder CommonJS
-const DropDown = require('@phoenixreisen/dropdown');
+const Dropdown = require('@phoenixreisen/dropdown');
 
 // oder ES6+
 import Dropdown from '@phoenixreisen/dropdown';
