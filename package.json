@@ -7,7 +7,7 @@
   "scripts": {
     "compile:js": "babel src --out-dir dist",
     "compile:scss": "npx sass --no-source-map ./src:./dist",
-    "prepublish": "npm run compile:js && npm run compile:scss",
+    "prepublish": "npm run compile:js && npm run compile:scss && npm test",
     "pretest": "babel src --out-dir test",
     "test": "ospec --require ./test-setup.js",
     "posttest": "del-cli test"
