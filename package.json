@@ -3,14 +3,14 @@
   "version": "0.0.1",
   "description": "Mithril Dropdown",
   "homepage": "https://design-system.phoenixreisen.net",
-  "main": "dist/dropdown.view.js",
+  "main": "dist/dropdown.m.js",
+  "module": "src/dropdown.m.js",
   "scripts": {
-    "compile:js": "babel src --out-dir dist",
-    "compile:scss": "npx sass --no-source-map ./src:./dist",
-    "prepublish": "npm run compile:js && npm run compile:scss && npm test",
-    "pretest": "babel src --out-dir test",
     "test": "ospec --require ./test-setup.js",
-    "posttest": "del-cli test"
+    "compile:js": "npx babel ./src/ --out-dir ./dist/",
+    "compile:scss": "npx sass --no-source-map ./src:./dist",
+    "pretest": "del-cli ./dist && npm run compile:js && npm run compile:scss",
+    "prepublish": "npm test"
   },
   "author": "Phoenix Reisen <it@phoenixreisen.com>",
   "contributors": [
@@ -27,12 +27,12 @@
   "devDependencies": {
     "babel": "^6.23.0",
     "babel-cli": "^6.26.0",
-    "babel-plugin-file-loader": "^1.1.1",
+    "babel-plugin-file-loader": "^2.0.0",
     "babel-plugin-inline-svg": "^1.0.1",
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-preset-env": "^1.7.0",
     "del-cli": "^3.0.0",
-    "jsdom": "^15.1.1",
+    "jsdom": "^15.2.1",
     "mithril-node-render": "^2.3.2",
     "mithril-query": "^3.0.1",
     "ospec": "^4.0.1"

@@ -3,7 +3,8 @@ const mq = require("mithril-query");
 const test = require("ospec");
 
 test.spec('Dropdown', () => {
-    const DropdownView = require('../test/dropdown.view.js');
+    const DropdownView = require('../dist/dropdown.m.js').default;
+
     const el1 = m('div.div1');
     const el2 = m('div.div2');
     const el3 = m('a.a1');

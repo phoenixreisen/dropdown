@@ -1,4 +1,4 @@
-const Dropdown = {
+export const Dropdown = {
 
     oninit(v) {
         const { isOpen } = v.attrs;
@@ -39,6 +39,4 @@ const Dropdown = {
     }
 }
 
-if(typeof module !== 'undefined') {
-    module.exports = Dropdown;
-}
+export default Dropdown;
