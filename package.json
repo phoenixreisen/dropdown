@@ -1,6 +1,6 @@
 {
   "name": "@phoenixreisen/dropdown",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Mithril Dropdown",
   "homepage": "https://design-system.phoenixreisen.net",
   "main": "dist/dropdown.m.js",
