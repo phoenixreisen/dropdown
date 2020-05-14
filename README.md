@@ -28,12 +28,12 @@ import Dropdown from '@phoenixreisen/dropdown';
 // Hyperscript bzw. Javascript
 const el1 = m('div');
 const el2 = m('div');
-const el3 = m('a'); 
+const el3 = m('a');
 
-m(Dropdown, { title: 'Optionen' }, [ 
-    el1, 
-    el2, 
-    el3 
+m(Dropdown, { title: 'Optionen' }, [
+    el1,
+    el2,
+    el3
 ]);
 
 // JSX
@@ -54,6 +54,7 @@ npm run test
 ## Deployment
 
 ```bash
+[npm install]                       # Abhängigkeiten installieren
 npm version [major|minor|patch]     # increase version x.x.x => major.minor.patch
 npm publish                         # upload to npm
 git push

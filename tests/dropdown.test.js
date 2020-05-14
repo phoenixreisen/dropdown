@@ -1,9 +1,12 @@
-global.m = require('mithril');
+const m = require('mithril');
 const mq = require("mithril-query");
 const test = require("ospec");
 
+Object.assign(global, m);
+
 test.spec('Dropdown', () => {
     const DropdownView = require('../dist/dropdown.m.js').default;
+    const closeOnEsc = require('../dist/dropdown.m.js').closeOnEsc;
 
     const el1 = m('div.div1');
     const el2 = m('div.div2');
@@ -37,7 +40,7 @@ test.spec('Dropdown', () => {
     });
 
     test('should close on escape keydown', () => {
-        vnode.instance.closeOnEsc(vnode, { keyCode: 27 });
+        closeOnEsc(vnode.state, {keyCode: 27});
         Dropdown2.redraw();
         test(Dropdown2.should.not.have('.dropdown--open')).equals(true);
     });
