@@ -45,7 +45,7 @@ export const Dropdown: m.Component<AttrTypes> = {
                     {children.map((content: any, index: number) => {
                         return (
                             <div key={`item-${index}`} class={`dropdown-item dropdown-item-${index}`}
-                                onclick={() => v.state.isOpen = !isOpen}>
+                                onclick={() => {v.state.isOpen = !isOpen}}>
                                 { content }
                             </div>
                         );
