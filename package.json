@@ -26,13 +26,13 @@
     "mithril": "^2.0.4"
   },
   "devDependencies": {
-    "@types/mithril": "^2.0.2",
-    "del-cli": "^3.0.0",
-    "jsdom": "^16.2.2",
+    "@types/mithril": "^2.0.3",
+    "del-cli": "^3.0.1",
+    "jsdom": "^16.3.0",
     "mithril-node-render": "^3.0.0",
     "mithril-query": "^3.1.0",
     "ospec": "^4.1.1",
     "tslib": "^2.0.0",
-    "typescript": "^3.9.2"
+    "typescript": "^3.9.6"
   }
 }
