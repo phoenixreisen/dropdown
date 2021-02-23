@@ -4,38 +4,40 @@ import m from 'mithril';
 
 //--- Types -----
 
-interface AttrTypes {
+interface Attrs {
     isOpen: boolean,
     icon?: string,
     title?: string,
     cssclass?: string,
 }
 
-interface StateTypes {
+interface State {
     isOpen: boolean,
 }
 
 //--- Funktionen -----
 
-export const closeOnEsc = (state: StateTypes, e: KeyboardEvent) => {
+export const closeOnEsc = (state: State, e: KeyboardEvent) => {
     if(e?.keyCode === 27) {
         state.isOpen = false;
         m.redraw();
     }
 };
 
-export const Dropdown: m.Component<AttrTypes> = {
+//--- Komponente -----
 
-    oninit({attrs, state}: m.Vnode<AttrTypes, StateTypes>) {
+export const Dropdown: m.Component<Attrs> = {
+
+    oninit({attrs, state}: m.Vnode<Attrs, State>) {
         state.isOpen = attrs.isOpen || false;
         document.body.addEventListener('keydown', e => {
             closeOnEsc(state, e);
         });
     },
 
-    view(v: m.Vnode<AttrTypes, StateTypes>) {
-        const {isOpen} = v.state as StateTypes;
-        const {title, icon, cssclass} = v.attrs as AttrTypes;
+    view(v: m.Vnode<Attrs, State>) {
+        const {isOpen} = v.state as State;
+        const {title, icon, cssclass} = v.attrs as Attrs;
         const children = v.children as m.ChildArray;
 
         return(
